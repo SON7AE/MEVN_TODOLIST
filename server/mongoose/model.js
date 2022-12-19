@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const schema = require('./schema/index');
+require('dotenv').config();
 
 const db = mongoose.connection;
 const model = (() => {
@@ -9,6 +10,7 @@ const model = (() => {
     });
 
     // Atlas MongoDB Cluster와 연결
+    mongoose.set('strictQuery', true);
     mongoose.connect(
         `mongodb+srv://${process.env.DB_ID}:${process.env.DB_PASSWORD}@crud-test-ver02.ighooyk.mongodb.net/?retryWrites=true&w=majority`
     );
