@@ -10,7 +10,7 @@
 
 `npm install mongoose`
 
-### - DB ID 및 PASSWORD 보안
+### - DB Id 및 Password 보안
 
 `npm install dotenv`
 
