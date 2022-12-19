@@ -11,7 +11,10 @@ app.get('/', (req, res) => {
     res.send('Success');
 });
 
-app.post('/create', Article.createArticle);
+app.get('/read', Article.readArticle);
+app.post('/create', Article.createArticle); // 생성을 할 때 많이 사용
+app.patch('/update', Article.updateArticle); // 수정을 할 때 많이 사용
+app.delete('/delete/:id', Article.deleteArticle); // 삭제할 때 많이 사용
 
 app.listen(PORT, 'localhost', () => {
     console.log(`App listening at http://localhost:${PORT}`);

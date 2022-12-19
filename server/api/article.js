@@ -7,17 +7,28 @@ const createArticle = async (req, res) => {
     const saveRequest = await newArticle.save();
 
     console.log(saveRequest);
-    res.send(true);
+    res.send(saveRequest);
 };
 
 // READ
-const readArticle = (req, res) => {};
+const readArticle = async (req, res) => {
+    const articles = await model.Article.find({});
+    res.send(articles);
+};
 
 // UPDATE
-const updateArticle = (req, res) => {};
+const updateArticle = async (req, res) => {
+    const { id, content } = req.body;
+    const updatedArticle = await model.Article.findByIdAndUpdate(id, { content });
+    res.send(updatedArticle);
+};
 
 // DELETE
-const deleteArticle = (req, res) => {};
+const deleteArticle = async (req, res) => {
+    const { id } = req.params;
+    const deleteArticle = await model.Article.findByIdAndDelete(id);
+    res.send(deleteArticle);
+};
 
 module.exports = {
     createArticle,
