@@ -17,3 +17,9 @@
 ### - Nodemon 설치
 
 `npm install -g nodemon`
+
+---
+
+### - 프론트엔드 : Vue.js로 구성 (버전2)
+
+`npx degit SON7AE/vue3_webpack_template#eslint`

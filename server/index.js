@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
 const { Article } = require('./api');
 const PORT = 3000;
 
 // req.body - post에서 들어온 페이로드를 받을 수 있다.
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
