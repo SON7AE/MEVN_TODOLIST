@@ -18,6 +18,10 @@
 
 `npm install -g nodemon`
 
+### - CORS 해결
+
+`npm install cors`
+
 ---
 
 ### - 프론트엔드 : Vue.js로 구성 (버전2)
