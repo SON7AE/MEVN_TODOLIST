@@ -14,7 +14,8 @@ app.get('/', (req, res) => {
     res.send('Success');
 });
 
-app.get('/read', Article.readArticle);
+app.get('/read', Article.readArticle); // 조회를 할 때 많이 사용
+app.get('/read/:id', Article.findOneArticle);
 app.post('/create', Article.createArticle); // 생성을 할 때 많이 사용
 app.patch('/update', Article.updateArticle); // 수정을 할 때 많이 사용
 app.delete('/delete/:id', Article.deleteArticle); // 삭제할 때 많이 사용

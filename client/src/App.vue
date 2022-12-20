@@ -1,22 +1,9 @@
 <template>
-    <div>Test</div>
+    <RouterView />
 </template>
 
 <script>
-import axios from 'axios';
-
-export default {
-    name: 'App',
-    created() {
-        this.getArticle();
-    },
-    methods: {
-        async getArticle() {
-            const { data } = await axios.get('http://localhost:3000/read');
-            console.log(data);
-        },
-    },
-};
+export default {};
 </script>
 
 <style></style>

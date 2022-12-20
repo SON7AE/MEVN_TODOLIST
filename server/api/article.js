@@ -15,6 +15,11 @@ const readArticle = async (req, res) => {
     const articles = await model.Article.find({});
     res.send(articles);
 };
+const findOneArticle = async (req, res) => {
+    const { id } = req.params;
+    const article = await model.Article.findById(id);
+    res.send(article);
+};
 
 // UPDATE
 const updateArticle = async (req, res) => {
@@ -33,6 +38,7 @@ const deleteArticle = async (req, res) => {
 module.exports = {
     createArticle,
     readArticle,
+    findOneArticle,
     updateArticle,
     deleteArticle,
 };
